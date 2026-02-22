@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "valorant.py"
+version = "0.1.0"
+authors = [
+  { name="Astro", email="equipexthurzin@gmail.com" },
+]
+description = "Uma SDK assíncrona para scraping de dados do Valorant"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "aiohttp>=3.8.0"
+]
+
+[project.urls]
+"sage_agent" = "https://playvalorant.com/pt-br/agents/sage/"
