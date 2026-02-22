@@ -1,0 +1,27 @@
+version: 2
+
+# Define que o build deve ser feito com o sistema de arquivos moderno
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.10"
+
+# Onde os arquivos de documentação estão (assumindo uma pasta /docs)
+python:
+  install:
+    - method: pip
+      path: .
+      extra_requirements:
+        - docs
+    # Garante que a SDK seja instalada para o Sphinx ler as docstrings
+    - method: pip
+      path: .
+
+# Configuração do Sphinx
+sphinx:
+  configuration: docs/conf.py
+
+# Formatos de saída além do HTML
+formats:
+  - pdf
+  - epub
